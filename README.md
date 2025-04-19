@@ -10,6 +10,11 @@ The system supports major insurance companies like **Medicaid** and **United Hea
 
 ## 🚀 Features
 
+- Visualize billing summary for multiple patients, two real doctors (Doctor Kelvin Nkansa and Doctor Lord Gyasi), and multiple insurance companies
+- Upload new data files (.docx or .csv) for doctors, insurance, and patients
+- Simulate billing for new patients/diseases from the dashboard sidebar
+- Download billing summary as CSV
+- Interactive charts and statistics
 - Accepts patient info and service details (via CPT codes)
 - Calculates total billed amount for hospital services
 - Determines insurance-covered costs vs. patient responsibility
@@ -31,11 +36,17 @@ Insurance_project/
 │├── uhc_eob_data.csv
 │├── uhc_eob_data.json
 │├── diagnosistable.pdf
-│└── uhc eob.pdf
+│├── uhc eob.pdf
+│├── Doctor_Charges.csv
+│├── Medicaid_Insurance_Rates.csv
+│├── Patient_Disease_Assignments.csv
+│└── ...
 │
 ├── scripts/      # Python scripts for extraction and processing
 │├── extract_diagnosis_table.py
-│└── extract_eob_data.py
+│├── extract_eob_data.py
+│├── simulate_billing.py
+│└── ...
 │
 ├── .gitignore    # Ignores all data outputs and temp files
 └── README.md     # Project instructions
@@ -76,6 +87,14 @@ Insurance_project/
      ```
    - Outputs: `uhc_eob_data.csv` and `uhc_eob_data.json` in `data/`.
 
+3. **Simulate Billing:**
+   - Upload new data files (.docx or .csv) for doctors, insurance, and patients in `data/`.
+   - Run:
+     ```bash
+     python scripts/simulate_billing.py
+     ```
+   - Outputs: Billing summary for new patients/diseases.
+
 ---
 
 ## 🔄 Workflow Summary
@@ -113,3 +132,24 @@ Insurance_project/
 
 ## 📧 Contact
 For questions or contributions, please contact the project maintainers or open an issue.
+
+---
+
+## Example Data Format
+
+**Doctor_Charges.csv**
+| Disease Name | ICD Code | Doctor A Rate ($) | Doctor B Rate ($) |
+|--------------|----------|-------------------|-------------------|
+| Diabetes     | E11      | 200               | 220               |
+
+**Medicaid_Insurance_Rates.csv**
+| Disease Name | ICD Code | Insurance Company | Insurance Rate ($) |
+|--------------|----------|-------------------|--------------------|
+| Diabetes     | E11      | Medicaid          | 180                |
+| Diabetes     | E11      | United Healthcare | 170                |
+
+**Patient_Disease_Assignments.csv**
+| Patient Name | Patient ID | Disease  | ICD Code | Insurance Company |
+|--------------|------------|----------|----------|-------------------|
+| John Doe     | 001        | Diabetes | E11      | Medicaid          |
+| Jane Smith   | 002        | Asthma   | J45      | United Healthcare |

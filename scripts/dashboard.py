@@ -41,7 +41,7 @@ def main():
         disease_options = doctor_df['Disease Name'].unique().tolist()
         new_disease = st.selectbox("Disease", disease_options)
         icd_code = doctor_df[doctor_df['Disease Name'] == new_disease]['ICD Code'].iloc[0]
-        doctor_options = ['A', 'B']
+        doctor_options = ['Doctor Kelvin Nkansa', 'Doctor Lord Gyasi']
         assigned_doctor = st.selectbox("Assigned Doctor", doctor_options)
         # Insurance companies from insurance_df
         insurance_options = insurance_df['Insurance Company'].unique().tolist() if 'Insurance Company' in insurance_df.columns else ['Medicaid']

@@ -32,7 +32,7 @@ def load_default_data():
 def prepare_billing_summary(doctor_df, insurance_df, patient_df):
     # Ensure patient_df has 'Assigned Doctor' and 'Insurance Company'
     if 'Assigned Doctor' not in patient_df.columns:
-        doctors = ['A', 'B'] * 3
+        doctors = ['Doctor Kelvin Nkansa', 'Doctor Lord Gyasi'] * 3
         patient_df['Assigned Doctor'] = [doctors[i] for i in range(len(patient_df))]
     # Ensure 'Insurance Company' in both patient_df and insurance_df
     if 'Insurance Company' not in patient_df.columns:
@@ -58,7 +58,7 @@ def prepare_billing_summary(doctor_df, insurance_df, patient_df):
 
     # Calculate charges and patient responsibility
     def get_doctor_charge(row):
-        if row['Assigned Doctor'] == 'A':
+        if row['Assigned Doctor'] == 'Doctor Kelvin Nkansa':
             return float(row['Doctor A Rate ($)'])
         else:
             return float(row['Doctor B Rate ($)'])
