@@ -135,6 +135,22 @@ For questions or contributions, please contact the project maintainers or open a
 
 ---
 
+## 📸 Dashboard Screenshots
+
+### Main Dashboard
+![Main Dashboard](assets/Dashboard.png)
+
+### Billing Summary Table
+![Billing Summary Table](assets/Billing Summary.png)
+
+### Patient Responsibility (Bar Chart)
+![Patient Responsibility Bar Chart](assets/Patient payment bar chart.png)
+
+### Download CSV Button
+![Download CSV Button](assets/Download_CSV_button.png)
+
+---
+
 ## Example Data Format
 
 **Doctor_Charges.csv**
