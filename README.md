@@ -141,13 +141,13 @@ For questions or contributions, please contact the project maintainers or open a
 ![Main Dashboard](assets/Dashboard.png)
 
 ### Billing Summary Table
-![Billing Summary Table](assets/Billing Summary.png)
+![Billing Summary Table](assets/billing_summary.png)
 
 ### Patient Responsibility (Bar Chart)
-![Patient Responsibility Bar Chart](assets/Patient payment bar chart.png)
+![Patient Responsibility Bar Chart](assets/patient_payment_bar_chart.png)
 
 ### Download CSV Button
-![Download CSV Button](assets/Download_CSV_button.png)
+![Download CSV Button](assets/download_csv.png)
 
 ---
 
