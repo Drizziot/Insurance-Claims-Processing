@@ -15,12 +15,12 @@ def extract_eob_data(pdf_path):
                 continue
             lines = text.split('\n')
             for i, line in enumerate(lines):
-                # Patient name
+                # Search Patient by name
                 if not patient_name:
                     m = re.search(r'Patient:\s*([\w\-, ]+)', line)
                     if m:
                         patient_name = m.group(1).strip()
-                # Patient ID
+                # Search Patient by ID
                 if not patient_id:
                     m = re.search(r'Insured ID #:\s*(\w+)', line)
                     if m:
